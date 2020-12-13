@@ -1,0 +1,38 @@
+--------------- StrcCtrlFile of SAF ----------------
+This file defines the structural control configuation of the TMDs
+The first THREE lines are comments. Do not remove any line of this file.
+----------- Active control mode ----------------(Now it is not used in this version)
+   0        TmdXCMode   - TmdX control mode {0: none, 1: user-defined from routine UserTmdXCont, 2: user-defined from Simulink} (switch)
+   0.0      TTmdXCOn    - Time to enable active TmdX control (s) [unused when TmdXCMode=0]
+   0        TmdYCMode   - TmdY control mode {0: none, 1: user-defined from routine UserTmdYCont, 2: user-defined from Simulink} (switch)
+   0.0      TTmdYCOn    - Time to enable active TmdY control (s) [unused when TmdYCMode=0]
+----------- Tuned mass damper in X drection (fore-aft)------------------
+True        TmdXDOF     - TmdX DOF (flag), Ture stands to enable the passitive control in X direction (fore-aft direction)
+   1        TmdXLoc     - Location of the TmdX {1: Nacelle, 2:Platform}
+   0.0      TmdXRefxnt  - Downwind distance from the tower-top ('n') or platform reference ('t') to the TmdX (meters) [this is also the TmdX neutral spring position]
+   0.0      TmdXRefynt  - Lateral  distance from the tower-top ('n') or platform reference ('t') to the TmdX (meters)
+   3.00     TmdXRefznt  - Vertical distance from the tower-top ('n') or platform reference ('t') to the TmdX (meters) [note that when in the platform reference, positive is downwards]
+   0.0	    TmdXAngle   - Initial or fixed TmdX coordinate system rotation angle about vertical axis (degrees)
+   2.00E4   TmdXMass    - TmdX mass (kg)
+   6.4E4    TmdXSpr     - TmdX initial or fixed spring stiffness (N/m)
+   1.0E4    TmdXDamp    - TmdX initial or fixed damping (N/(m/s))
+   0.0E4    TmdXFext    - TmdX initial or fixed external force (N)
+   7        TmdXDWSP    - TmdX downwind distance to downwind stop position (m) [measured from TmdXRefxn]
+  -7        TmdXUWSP    - TmdX downwind distance to upwind stop position (m) [measured from TmdXRefxn]
+   5.0E5    TmdXSSpr    - TmdX initial or fixed stop spring stiffness (N/m)
+   5.0E5    TmdXSDamp   - TmdX initial or fixed stop damping (N/(m/s))
+----------- Tuned mass damper in Y drection (fore-aft)------------------
+False       TmdYDOF     - TmdY DOF (flag), Ture stands to enable the passitive control in Y direction (side-side direction)  
+   1	    TmdYLoc     - Location of the TmdY {1: Nacelle, 2:Platform}
+   0.0      TmdYRefxnt  - Downwind distance from the tower-top ('n') or platform reference ('t') to the TmdY (meters)
+   0.0      TmdYRefynt  - Lateral  distance from the tower-top ('n') or platform reference ('t') to the TmdY (meters) [this is also the TmdY neutral spring position]
+   3.00     TmdYRefznt  - Vertical distance from the tower-top ('n') or platform reference ('t') to the TmdY (meters) [note that when in the platform reference, positive is downwards]
+   0.0	    TmdYAngle   - Initial or fixed TmdY coordinate system rotation angle about vertical axis (degrees)
+   2.00E4   TmdYMass    - TmdY mass (kg)    
+   6.4E4    TmdYSpr     - TmdY initial or fixed spring stiffness (N/m)
+   1.0E4    TmdYDamp    - TmdY initial or fixed damping (N/(m/s))
+   0.0E4    TmdYFext    - TmdY initial or fixed external force (N)
+   3        TmdYPLSP    - TmdY positive lateral stop position (m) [measured from TmdYRefyn]
+  -3        TmdYNLSP    - TmdY negative lateral stop position (m) [measured from TmdYRefyn]
+   3.0E5    TmdYSSpr    - TmdY initial or fixed stop spring stiffness (N/m)
+   3.0E5    TmdYSDamp   - TmdY initial or fixed stop damping (N/(m/s))

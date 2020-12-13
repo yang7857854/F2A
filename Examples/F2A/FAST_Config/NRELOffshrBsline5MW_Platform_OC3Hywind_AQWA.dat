@@ -1,0 +1,70 @@
+--------------------------------------------------------------------------------
+---------------------- FAST PLATFORM FILE --------------------------------------
+NREL 5.0 MW offshore baseline floating platform input properties for the OC3-Hywind spar-buoy.
+---------------------- FEATURE FLAGS (CONT) ------------------------------------
+True        PtfmSgDOF   - Platform horizontal surge translation DOF (flag)
+True        PtfmSwDOF   - Platform horizontal sway translation DOF (flag)
+True        PtfmHvDOF   - Platform vertical heave translation DOF (flag)
+True        PtfmRDOF    - Platform roll tilt rotation DOF (flag)
+True        PtfmPDOF    - Platform pitch tilt rotation DOF (flag)
+True        PtfmYDOF    - Platform yaw rotation DOF (flag)
+---------------------- INITIAL CONDITIONS (CONT) -------------------------------
+   0.0      PtfmSurge   - Initial or fixed horizontal surge translational displacement of platform (meters)
+   0.0      PtfmSway    - Initial or fixed horizontal sway translational displacement of platform (meters)
+   0.0      PtfmHeave   - Initial or fixed vertical heave translational displacement of platform (meters)
+   0.0      PtfmRoll    - Initial or fixed roll tilt rotational displacement of platform (degrees)
+   0.0      PtfmPitch   - Initial or fixed pitch tilt rotational displacement of platform (degrees)
+   0.0      PtfmYaw     - Initial or fixed yaw rotational displacement of platform (degrees)
+---------------------- TURBINE CONFIGURATION (CONT) ----------------------------
+ -10.0      TwrDraft    - Downward distance from the ground level [onshore] or MSL [offshore] to the tower base platform connection (meters)
+  89.9155   PtfmCM      - Downward distance from the ground level [onshore] or MSL [offshore] to the platform CM (meters)
+  0.0      PtfmRef     - Downward distance from the ground level [onshore] or MSL [offshore] to the platform reference point (meters)
+---------------------- MASS AND INERTIA (CONT) ---------------------------------
+0.0	7466.33E3   PtfmMass    - Platform mass (kg)
+0.0E6   PtfmRIner   - Platform inertia for roll tilt rotation about the platform CM (kg m^2)
+0.0E6   PtfmPIner   - Platform inertia for pitch tilt rotation about the platform CM (kg m^2)
+0.0E6   PtfmYIner   - Platfrom inertia for yaw rotation about the platform CM (kg m^2)
+---------------------- PLATFORM (CONT) -----------------------------------------
+0  PtfmLdMod   - Platform loading model {0: none, 1: user-defined from routine UserPtfmLd} (switch)
+"HydroData\Spar"                                 WAMITFile   - Root name of WAMIT output files containing the linear, nondimensionalized, hydrostatic restoring matrix (.hst extension), frequency-dependent hydrodynamic added mass matrix and damping matrix (.1 extension), and frequency- and direction-dependent wave excitation force vector per unit wave amplitude (.3 extension) (quoted string) [MAKE SURE THE FREQUENCIES INHERENT IN THESE WAMIT FILES SPAN THE PHYSICALLY-SIGNIFICANT RANGE OF FREQUENCIES FOR THE GIVEN PLATFORM; THEY MUST CONTAIN THE ZERO- AND INFINITE-FREQUENCY LIMITS!]
+8029.21     PtfmVol0    - Displaced volume of water when the platform is in its undisplaced position (m^3) [USE THE SAME VALUE COMPUTED BY WAMIT AS OUTPUT IN THE .OUT FILE!]
+ 240        PtfmNodes   - Number of platform nodes used in calculation of viscous drag term from Morison's equation (-)
+ 120.0      PtfmDraft   - Effective platform draft    in calculation of viscous drag term from Morison's equation (meters)
+   6.5      PtfmDiam    - Effective platform diameter in calculation of viscous drag term from Morison's equation (meters)
+   0.6      PtfmCD      - Effective platform normalized hydrodynamic viscous drag coefficient in calculation of viscous drag term from Morison's equation (-)
+   60.0      RdtnTMax    - Analysis time for wave radiation kernel calculations (sec) [determines RdtnDOmega=Pi/RdtnTMax in the cosine transform]  [MAKE SURE THIS IS LONG ENOUGH FOR THE RADIATION IMPULSE RESPONSE FUNCTIONS TO DECAY TO NEAR-ZERO FOR THE GIVEN PLATFORM!]
+   0.025    RdtnDT      - Time step for wave radiation kernel calculations (sec) [DT<=RdtnDT<=0.1 recommended] [determines RdtnOmegaMax=Pi/RdtnDT in the cosine transform]
+---------------------- MOORING LINES -------------------------------------------
+   3        NumLines    - Number of mooring lines (-)
+   1        LineMod     - Mooring line model {1: standard quasi-static, 2: user-defined from routine UserLine} (switch) [used only when NumLines>0]
+LRadAnch  LAngAnch  LDpthAnch  LRadFair  LAngFair   LDrftFair  LUnstrLen  LDiam   LMassDen  LEAStff    LSeabedCD  LTenTol [used only when NumLines>0 and LineMod=1]
+(m)       (deg)     (m)        (m)       (deg)      (m)        (m)        (m)     (kg/m)    (N)        (-)        (-)     [used only when NumLines>0 and LineMod=1]
+ 853.87     0.0     320.0      5.2         0.0      70.0       902.2      0.09    77.7066   384.243E6  0.0        0.0000001
+ 853.87   120.0     320.0      5.2       120.0      70.0       902.2      0.09    77.7066   384.243E6  0.0        0.0000001
+ 853.87   240.0     320.0      5.2       240.0      70.0       902.2      0.09    77.7066   384.243E6  0.0        0.0000001
+---------------------- WAVES ---------------------------------------------------
+1025.0      WtrDens     - Water density (kg/m^3)
+ 320.0      WtrDpth     - Water depth (meters) [USE THE SAME VALUE SPECIFIED IN THE WAMIT .POT FILE!]
+   1        WaveMod     - Incident wave kinematics model {0: none=still water, 1: plane progressive (regular), 2: JONSWAP/Pierson-Moskowitz spectrum (irregular), 3: user-defind spectrum from routine UserWaveSpctrm (irregular)} (switch)
+3630.0      WaveTMax    - Analysis time for incident wave calculations (sec) [unused when WaveMod=0] [determines WaveDOmega=2Pi/WaveTMax in the IFFT]
+   0.25     WaveDT      - Time step for incident wave calculations (sec) [unused when WaveMod=0] [0.1<=WaveDT<=1.0 recommended] [determines WaveOmegaMax=Pi/WaveDT in the IFFT]
+   6.0      WaveHs      - Significant wave height of incident waves (meters) [used only when WaveMod=1 or 2]
+  10.0      WaveTp      - Peak spectral period of incident waves (sec) [used only when WaveMod=1 or 2]
+DEFAULT     WavePkShp   - Peak shape parameter of incident wave spectrum (-) or DEFAULT (unquoted string) [used only when WaveMod=2] [use 1.0 for Pierson-Moskowitz]
+   0.0      WaveDir     - Incident wave propagation heading direction (degrees) [unused when WaveMod=0]
+123456789   WaveSeed(1) - First  random seed of incident waves [-2147483648 to 2147483647] (-) [unused when WaveMod=0]
+1011121314  WaveSeed(2) - Second random seed of incident waves [-2147483648 to 2147483647] (-) [unused when WaveMod=0]
+---------------------- CURRENT -------------------------------------------------
+   0        CurrMod     - Current profile model {0: none=no current, 1: standard, 2: user-defined from routine UserCurrent} (switch)
+   0.0      CurrSSV0    - Sub-surface current velocity at still water level (m/s) [used only when CurrMod=1]
+DEFAULT     CurrSSDir   - Sub-surface current heading direction (degrees) or DEFAULT (unquoted string) [used only when CurrMod=1]
+  20.0      CurrNSRef   - Near-surface current reference depth (meters) [used only when CurrMod=1]
+   0.0      CurrNSV0    - Near-surface current velocity at still water level (m/s) [used only when CurrMod=1]
+   0.0      CurrNSDir   - Near-surface current heading direction (degrees) [used only when CurrMod=1]
+   0.0      CurrDIV     - Depth-independent current velocity (m/s) [used only when CurrMod=1]
+   0.0      CurrDIDir   - Depth-independent current heading direction (degrees) [used only when CurrMod=1]
+---------------------- OUTPUT (CONT) -------------------------------------------
+   1        NWaveKin    - Number of points where the incident wave kinematics can be output [0 to 9] (-)
+ 240        WaveKinNd   - List of platform nodes that have wave kinematics sensors [1 to PtfmNodes] (-) [unused if NWaveKin=0]
+
+

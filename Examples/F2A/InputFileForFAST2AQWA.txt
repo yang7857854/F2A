@@ -1,0 +1,10 @@
+! Input file of the interface FAST2AQWA that is developed by Y.Yang (PDRA in LJMU) on 10-March-2020 for performing fully-coupled analysis of floating offshore wind turbines (FOWTs)
+! The FAST2AQWA is implemented through the user_force DLL. FAST v7 is used to examine the aero-elastic effects of the wind turbine.
+! This file is specified for NREL 5MW wind turbine supported by the OC3-Hywind platform (Do not remove anyline below)
+--------------- FAST Configuration ------------------
+"Spar_Turb_114_NoSSI2.fst"	- Prifile	- Primary input file for FAST
+True			- CouplingFlag		- Flag of coupling interface. False: the platform motion and velocity imported to FAST WILL BE ZERO.
+--------------- AQWA structure properties -----------
+1			- IndexTwrStr		- Index of the structure connecting to the tower directly.
+True			- OPtfmFrc		- Flag of whether output the platform forces
+---------------- END OF THE INPUT -------------------			
