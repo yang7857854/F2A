@@ -1,0 +1,33 @@
+Tower section properties
+13        n_secs:     number of tower sections at which properties are specified (-)
+
+sec_loc  str_tw  tw_iner   mass_den  flp_iner  edge_iner  flp_stff   edge_stff   tor_stff   axial_stff  cg_offst  sc_offst tc_offst
+(-)      (deg)    (deg)    (kg/m)     (kg-m)    (kg-m)     (Nm^2)     (Nm^2)      (Nm^2)       (N)        (m)       (m)      (m)
+0.00000   0.0     0.0     9517.14    41979.2   41979.2    1037.13E9  1037.13E9   798.098E9  235.129E9     0.0       0.0      0.0
+0.27881   0.0     0.0     9517.14    41979.2   41979.2    1037.13E9  1037.13E9   798.098E9  235.129E9     0.0       0.0      0.0
+0.27882   0.0     0.0     4306.51    19205.6   19205.6     474.49E9   474.49E9   365.133E9  106.396E9     0.0       0.0      0.0
+0.35094   0.0     0.0     4030.44    16720.0   16720.0     413.08E9   413.08E9   317.878E9   99.576E9     0.0       0.0      0.0
+0.42306   0.0     0.0     3763.45    14483.4   14483.4     357.83E9   357.83E9   275.356E9   92.979E9     0.0       0.0      0.0
+0.49517   0.0     0.0     3505.52    12478.7   12478.7     308.30E9   308.30E9   237.242E9   86.607E9     0.0       0.0      0.0
+0.56729   0.0     0.0     3256.66    10689.2   10689.2     264.08E9   264.08E9   203.220E9   80.459E9     0.0       0.0      0.0
+0.63941   0.0     0.0     3016.86     9098.9    9098.9     224.80E9   224.80E9   172.987E9   74.534E9     0.0       0.0      0.0
+0.71153   0.0     0.0     2786.13     7692.7    7692.7     190.06E9   190.06E9   146.252E9   68.834E9     0.0       0.0      0.0
+0.78365   0.0     0.0     2564.46     6455.7    6455.7     159.49E9   159.49E9   122.735E9   63.357E9     0.0       0.0      0.0
+0.85576   0.0     0.0     2351.87     5373.9    5373.9     132.77E9   132.77E9   102.167E9   58.105E9     0.0       0.0      0.0
+0.92788   0.0     0.0     2148.34     4433.6    4433.6     109.54E9   109.54E9    84.291E9   53.077E9     0.0       0.0      0.0
+1.00000   0.0     0.0     1953.87     3622.1    3622.1      89.49E9    89.49E9    68.863E9   48.272E9     0.0       0.0      0.0
+
+
+
+
+
+
+
+**Note: If the above data represents TOWER properties, the following are overwritten:
+  str_tw is set to zero
+  tw_iner is set to zero
+  cg_offst is set to zero
+  sc_offst is set to zero
+  tc_offst is set to zero
+  edge_iner is set equal to flp_iner
+  edge_stff is set equal to flp_stff

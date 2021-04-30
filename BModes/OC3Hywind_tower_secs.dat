@@ -1,0 +1,31 @@
+Tower section properties
+11        n_secs:     number of tower sections at which properties are specified (-)
+
+sec_loc  str_tw  tw_iner   mass_den  flp_iner  edge_iner  flp_stff   edge_stff   tor_stff   axial_stff  cg_offst  sc_offst tc_offst
+(-)      (deg)    (deg)    (kg/m)     (kg-m)    (kg-m)     (Nm^2)     (Nm^2)      (Nm^2)       (N)        (m)       (m)      (m)
+0.0      0.0     0.0       4667.00   24443.7   24443.7    603.903E9  603.903E9   464.718E9  115.302E9   0.0       0.0      0.0
+0.1      0.0     0.0       4345.28   20952.2   20952.2    517.644E9  517.644E9   398.339E9  107.354E9   0.0       0.0      0.0
+0.2      0.0     0.0       4034.76   17847.0   17847.0    440.925E9  440.925E9   339.303E9   99.682E9   0.0       0.0      0.0
+0.3      0.0     0.0       3735.44   15098.5   15098.5    373.022E9  373.022E9   287.049E9   92.287E9   0.0       0.0      0.0
+0.4      0.0     0.0       3447.32   12678.6   12678.6    313.236E9  313.236E9   241.043E9   85.169E9   0.0       0.0      0.0
+0.5      0.0     0.0       3170.40   10560.1   10560.1    260.897E9  260.897E9   200.767E9   78.328E9   0.0       0.0      0.0
+0.6      0.0     0.0       2904.69    8717.2    8717.2    215.365E9  215.365E9   165.729E9   71.763E9   0.0       0.0      0.0
+0.7      0.0     0.0       2650.18    7124.9    7124.9    176.028E9  176.028E9   135.458E9   65.475E9   0.0       0.0      0.0
+0.8      0.0     0.0       2406.88    5759.8    5759.8    142.301E9  142.301E9   109.504E9   59.464E9   0.0       0.0      0.0
+0.9      0.0     0.0       2174.77    4599.3    4599.3    113.630E9  113.630E9    87.441E9   53.730E9   0.0       0.0      0.0
+1.0      0.0     0.0       1953.87    3622.1    3622.1     89.488E9   89.488E9    68.863E9   48.272E9   0.0       0.0      0.0
+
+
+
+
+
+
+
+**Note: If the above data represents TOWER properties, the following are overwritten:
+  str_tw is set to zero
+  tw_iner is set to zero
+  cg_offst is set to zero
+  sc_offst is set to zero
+  tc_offst is set to zero
+  edge_iner is set equal to flp_iner
+  edge_stff is set equal to flp_stff

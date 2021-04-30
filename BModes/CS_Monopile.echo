@@ -1,0 +1,261 @@
+            T  Echo           - Echo input file contents to *.echo file if true
+            2  beam_type      - beam type, 1: blade; 2: tower
+   0.0000E+00  romg           - rotor speed (rpm)
+   1.0000E+00  omegar         - rotor speed multiplicative factor
+   8.7600E+01  radius         - rotor tip radius or tower height above ground (m)
+   0.0000E+00  rroot          - hub radius or tower-base height (m)
+   0.0000E+00  btp            - precone (deg)
+   0.0000E+00  bl_thp         - blade pitch setting (deg)
+            3  hub_conn       - hub-to-blade connectivity identifier
+           20  modepr         - number of modes to be printed
+            T  TabDelim       - output format (t: std; f: tab-delimited)
+            F  mid_node_tw    - t: output twist at mid nodes; f: do otherwise
+                                                                                                                                                                                                        
+--------- Blade-tip or tower-top mass properties --------------------------------------------                                                                                                           
+   3.5000E+05  tip_mass       - tip mass
+  -4.1378E-01  cm_loc         - tip-mass c.m. location wrt the reference axis
+   1.9670E+00  cm_axial       - tip-mass c.m. axial offset wrt tip
+   4.3700E+07  ixx_tip        - mass moment of inertia about x axis (wt-specific)
+   2.3530E+07  iyy_tip        - mass moment of inertia about y axis
+   2.5420E+07  izz_tip        - mass moment of inertia about z axis
+   0.0000E+00  ixy_tip        - cross product of inertia
+   1.1690E+06  izx_tip        - cross product of inertia
+   0.0000E+00  iyz_tip        - cross product of inertia
+                                                                                                                                                                                                        
+--------- Distributed-property identifiers --------------------------------------------------------                                                                                                     
+            1  id_mat         - material isotropy identifier (not used; use later)
+               sec_props_file - name of beam section properties file (-)
+  "CS_monopile_tower_secs.dat"
+                                                                                                                                                                                                        
+Property scaling factors..............................                                                                                                                                                  
+   1.0000E+00  sec_mass_mult  - mass density multiplier (-)
+   1.0000E+00  flp_iner_mult  - blade flap or tower f-a inertia multiplier (-)
+   1.0000E+00  lag_iner_mult  - blade lag or tower s-s inertia multiplier (-)
+   1.0000E+00  flp_stff_mult  - blade flap or tower f-a bending stiffness multiplier (-)
+   1.0000E+00  edge_stff_mult - blade lag or tower s-s bending stiffness multiplier (-)
+   1.0000E+00  tor_stff_mult  - torsion stiffness multiplier (-)
+   1.0000E+00  axial_stff_mul - axial stiffness multiplier (-)
+   1.0000E+00  cg_offst_mult  - cg offset multiplier (-)
+   1.0000E+00  sc_offst_mult  - shear center multiplier (-)
+   1.0000E+00  tc_offst_mult  - tension center multiplier (-)
+                                                                                                                                                                                                        
+--------- Finite element discretization --------------------------------------------------                                                                                                              
+           61  nselt          - number of blade or tower elements (-)
+Distance of element boundary nodes from blade or flexible-tower root (normalized wrt blade or tower length), el_loc()                                                                                   
+   0.0000E+00  el_loc         - array of normalized element locations (-)
+   3.4819E-03  el_loc         - array of normalized element locations (-)
+   1.0446E-02  el_loc         - array of normalized element locations (-)
+   1.7409E-02  el_loc         - array of normalized element locations (-)
+   2.4373E-02  el_loc         - array of normalized element locations (-)
+   3.1337E-02  el_loc         - array of normalized element locations (-)
+   3.8301E-02  el_loc         - array of normalized element locations (-)
+   4.5265E-02  el_loc         - array of normalized element locations (-)
+   5.2228E-02  el_loc         - array of normalized element locations (-)
+   5.9192E-02  el_loc         - array of normalized element locations (-)
+   6.6156E-02  el_loc         - array of normalized element locations (-)
+   7.3120E-02  el_loc         - array of normalized element locations (-)
+   8.0084E-02  el_loc         - array of normalized element locations (-)
+   8.7047E-02  el_loc         - array of normalized element locations (-)
+   9.4011E-02  el_loc         - array of normalized element locations (-)
+   1.0097E-01  el_loc         - array of normalized element locations (-)
+   1.0794E-01  el_loc         - array of normalized element locations (-)
+   1.1490E-01  el_loc         - array of normalized element locations (-)
+   1.2187E-01  el_loc         - array of normalized element locations (-)
+   1.2883E-01  el_loc         - array of normalized element locations (-)
+   1.3579E-01  el_loc         - array of normalized element locations (-)
+   1.3990E-01  el_loc         - array of normalized element locations (-)
+   1.4972E-01  el_loc         - array of normalized element locations (-)
+   1.5669E-01  el_loc         - array of normalized element locations (-)
+   1.6365E-01  el_loc         - array of normalized element locations (-)
+   1.7061E-01  el_loc         - array of normalized element locations (-)
+   1.7758E-01  el_loc         - array of normalized element locations (-)
+   1.8454E-01  el_loc         - array of normalized element locations (-)
+   1.9150E-01  el_loc         - array of normalized element locations (-)
+   1.9847E-01  el_loc         - array of normalized element locations (-)
+   2.0543E-01  el_loc         - array of normalized element locations (-)
+   2.1240E-01  el_loc         - array of normalized element locations (-)
+   2.1936E-01  el_loc         - array of normalized element locations (-)
+   2.2632E-01  el_loc         - array of normalized element locations (-)
+   2.3329E-01  el_loc         - array of normalized element locations (-)
+   2.4025E-01  el_loc         - array of normalized element locations (-)
+   2.4721E-01  el_loc         - array of normalized element locations (-)
+   2.5070E-01  el_loc         - array of normalized element locations (-)
+   3.2033E-01  el_loc         - array of normalized element locations (-)
+   3.7971E-01  el_loc         - array of normalized element locations (-)
+   4.2479E-01  el_loc         - array of normalized element locations (-)
+   4.5961E-01  el_loc         - array of normalized element locations (-)
+   4.8663E-01  el_loc         - array of normalized element locations (-)
+   5.1366E-01  el_loc         - array of normalized element locations (-)
+   5.4068E-01  el_loc         - array of normalized element locations (-)
+   5.6770E-01  el_loc         - array of normalized element locations (-)
+   5.9471E-01  el_loc         - array of normalized element locations (-)
+   6.2173E-01  el_loc         - array of normalized element locations (-)
+   6.4875E-01  el_loc         - array of normalized element locations (-)
+   6.7577E-01  el_loc         - array of normalized element locations (-)
+   7.0279E-01  el_loc         - array of normalized element locations (-)
+   7.2981E-01  el_loc         - array of normalized element locations (-)
+   7.5683E-01  el_loc         - array of normalized element locations (-)
+   7.8385E-01  el_loc         - array of normalized element locations (-)
+   8.1087E-01  el_loc         - array of normalized element locations (-)
+   8.3789E-01  el_loc         - array of normalized element locations (-)
+   8.6491E-01  el_loc         - array of normalized element locations (-)
+   8.9192E-01  el_loc         - array of normalized element locations (-)
+   9.1894E-01  el_loc         - array of normalized element locations (-)
+   9.4596E-01  el_loc         - array of normalized element locations (-)
+   9.7298E-01  el_loc         - array of normalized element locations (-)
+   1.0000E+00  el_loc         - array of normalized element locations (-)
+                                                                                                                                                                                                        
+--------- Properties of tower support subsystem (read only if beam_type is 2) ------------                                                                                                              
+            1  tow_support    - aditional tower support (-)
+   2.0000E+01  draft          - depth of tower base from the MSL (mean sea level) (m)
+   0.0000E+00  cm_pform       - distance of platform c.m. below the MSL (m)
+   0.0000E+00  mass_pform     - platform mass (kg)
+Platform mass inertia 3X3 matrix (i_matrix_pform):                                                                                                                                                      
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row1
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row1
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row1
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row2
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row2
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row2
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row3
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row3
+   0.0000E+00  i_matrix_pform - platform inertia matrix-row3
+   2.0000E+01  ref_msl        - distance of platform reference point below the MSL (m)
+Platform-reference-point-referred hydrodynamic 6X6 matrix (hydro_M):                                                                                                                                    
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+   0.0000E+00  hydro_M        - platform added-mass inertia matrix
+Platform-reference-point-referred hydrodynamic 6X6 stiffness matrix (hydro_K):                                                                                                                          
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+   0.0000E+00  hydro_K        - platform hydrodynamic stiffness matrix
+Mooring-system 6X6 stiffness matrix (mooring_K):                                                                                                                                                        
+   2.5748E+09  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+  -2.2532E+10  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   2.5748E+09  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   2.2532E+10  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   2.2532E+10  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   2.6291E+11  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+  -2.2532E+10  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   2.6291E+11  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+   0.0000E+00  mooring_K      - platform mooring-system stiffness matrix
+                                                                                                                                                                                                        
+Distributed (hydrodynamic) added-mass per unit length along a flexible portion of the tower length:                                                                                                     
+            0  n_secs_m_distr - number of points at which added mass per unit length is specified (-)
+                                                                                                                                                                                                        
+Distributed elastic stiffness per unit length along a flexible portion of the tower length:                                                                                                             
+            0  n_secs_k_distr - number of points at which distributed stiffness per unit length is specified (-)
+                                                                                                                                                                                                        
+Tension wires data                                                                                                                                                                                      
+            0  n_attachments  - number of wire-attachment locations on tower (-)
+Tower section properties                                                                                                                                                                                
+           13  n_secs         - number of blade or tower sections (-)
+                                                                                                                                                                                                        
+sec_loc  str_tw  tw_iner   mass_den  flp_iner  edge_iner  flp_stff   edge_stff   tor_stff   axial_stff  cg_offst  sc_offst tc_offst                                                                     
+(-)      (deg)    (deg)    (kg/m)     (kg-m)    (kg-m)     (Nm^2)     (Nm^2)      (Nm^2)       (N)        (m)       (m)      (m)                                                                        
+0.00000     0.000     0.000  9517.140 41979.200 41979.200  1.04E+12  1.04E+12  7.98E+11  2.35E+11     0.000     0.000     0.000
+0.27881     0.000     0.000  9517.140 41979.200 41979.200  1.04E+12  1.04E+12  7.98E+11  2.35E+11     0.000     0.000     0.000
+0.27882     0.000     0.000  4306.510 19205.600 19205.600  4.74E+11  4.74E+11  3.65E+11  1.06E+11     0.000     0.000     0.000
+0.35094     0.000     0.000  4030.440 16720.000 16720.000  4.13E+11  4.13E+11  3.18E+11  9.96E+10     0.000     0.000     0.000
+0.42306     0.000     0.000  3763.450 14483.400 14483.400  3.58E+11  3.58E+11  2.75E+11  9.30E+10     0.000     0.000     0.000
+0.49517     0.000     0.000  3505.520 12478.700 12478.700  3.08E+11  3.08E+11  2.37E+11  8.66E+10     0.000     0.000     0.000
+0.56729     0.000     0.000  3256.660 10689.200 10689.200  2.64E+11  2.64E+11  2.03E+11  8.05E+10     0.000     0.000     0.000
+0.63941     0.000     0.000  3016.860  9098.900  9098.900  2.25E+11  2.25E+11  1.73E+11  7.45E+10     0.000     0.000     0.000
+0.71153     0.000     0.000  2786.130  7692.700  7692.700  1.90E+11  1.90E+11  1.46E+11  6.88E+10     0.000     0.000     0.000
+0.78365     0.000     0.000  2564.460  6455.700  6455.700  1.59E+11  1.59E+11  1.23E+11  6.34E+10     0.000     0.000     0.000
+0.85576     0.000     0.000  2351.870  5373.900  5373.900  1.33E+11  1.33E+11  1.02E+11  5.81E+10     0.000     0.000     0.000
+0.92788     0.000     0.000  2148.340  4433.600  4433.600  1.10E+11  1.10E+11  8.43E+10  5.31E+10     0.000     0.000     0.000
+1.00000     0.000     0.000  1953.870  3622.100  3622.100  8.95E+10  8.95E+10  6.89E+10  4.83E+10     0.000     0.000     0.000
