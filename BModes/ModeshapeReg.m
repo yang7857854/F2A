@@ -3,7 +3,7 @@
 % date: April 20, 2021
 clear all;
 close all;
-Data = load ('ModeShape_Spar.txt');% first column: Non-dimensional height; Others: Mode shapes;
+Data = load ('ModeShape_Spar.txt');% <Normalized height> <1st fore-aft> <2nd fore-aft> <1st side-side> <2nd side-side>
 fileNameOut = 'ModeCoefficients_Spar.txt'; % filename of the output file that stores the coefficients.
 polyMode = 2; % 1 for "Projection", 2 for "ImprovedDirect" 
 x = Data(:,1);
@@ -60,8 +60,22 @@ for i=1:NumModes
 end
 %Ouput coefficients
 fid1 = fopen(fileNameOut,'wt');
-for j=1:5*NumModes
-    fprintf(fid1,'%13.7f \n',Coef(j)); 
+if (NumModes==4)
+    for i=1:5
+        TempS = num2str(i+1)
+        fprintf(fid1,'%13.7f \t %s \n',Coef(i), strcat('TwFAM1Sh(',TempS,') - Mode 1, coefficient of x^',TempS,' term'));
+    end
+    for i=1:5
+        TempS = num2str(i+1)
+        fprintf(fid1,'%13.7f \t %s \n',Coef(i), strcat('TwFAM2Sh(',TempS,') - Mode 2, coefficient of x^',TempS,' term'));
+    end
+    fprintf(fid1,'%s \n','---------------------- TOWER SIDE-TO-SIDE MODE SHAPES --------------------------');
+    for i=1:5
+        TempS = num2str(i+1)
+        fprintf(fid1,'%13.7f \t %s \n',Coef(i), strcat('TwSSM1Sh(',TempS,') - Mode 1, coefficient of x^',TempS,' term'));
+    end
+    for i=1:5
+        TempS = num2str(i+1)
+        fprintf(fid1,'%13.7f \t %s \n',Coef(i), strcat('TwSSM2Sh(',TempS,') - Mode 2, coefficient of x^',TempS,' term'));
+    end
 end
-
-    
